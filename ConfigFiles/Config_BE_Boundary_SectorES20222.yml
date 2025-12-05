@@ -1,0 +1,138 @@
+Description: Main configuration file of the Unleash model for Spain
+SimulationType: LP clustered
+SimulationDirectory: Simulations/(2)_BE_NBGx3.5
+StartDate: !!python/tuple
+- 2022
+- 1
+- 1
+- 0
+- 0
+- 0
+StopDate: !!python/tuple
+- 2022
+- 12
+- 31
+- 0
+- 0
+- 0
+DataTimeStep: 1
+SimulationTimeStep: 1
+HorizonLength: 3
+LookAhead: 1
+AllowCurtailment: 1
+GAMS_folder: ''
+Demand: matlabdata1/Load_RealTime1/ES/1h/2022.csv
+RenewablesAF: matlabdata1/AvailabilityFactors/ES/1h/2022.csv
+Outages: ''
+ShareOfFlexibleDemand: ''
+DemandFlexibility: ''
+LoadShedding: ''
+PowerPlantData: matlabdata1/PowerPlants/ES/20222.csv
+NTC: ''
+Interconnections: matlabdata1/CrossBorderFlows/1h/2022.csv
+TransmissionGridType: NTC
+GridData: ''
+GeoData: ''
+HydroScheduling: 'Off'
+HydroSchedulingHorizon: Annual
+InitialFinalReservoirLevel: 1
+ReservoirLevels: matlabdata1/Reservesprofile/2022.csv
+ReservoirLevelInitial: ''
+ReservoirLevelFinal: ''
+ReservoirScaledInflows: matlabdata1/HydroData/ScaledInflows/ES/1h/2022.csv
+StorageAlertLevels: ''
+StorageFloodControl: ''
+WaterValue: ''
+CostLoadShedding: ''
+CostCurtailment: ''
+CostOfSpillage: ''
+CostXNotServed: ''
+ValueOfLostLoad: ''
+PriceTransmission: ''
+PriceOfGas: ''
+PriceOfBlackCoal: ''
+PriceOfLignite: ''
+PriceOfCO2: ''
+PriceOfBiomass: ''
+PriceOfFuelOil: ''
+PriceOfNuclear: ''
+PriceOfPeat: ''
+PriceOfAmmonia: ''
+ReserveCalculation: Generic
+ShareOfQuickStartUnits: ''
+Reserve2U: ''
+Reserve2D: ''
+PrimaryReserveLimit: ''
+InertiaLimit: ''
+FFRLimit: ''
+FFRGainLimit: ''
+FrequencyStability: 'Off'
+SystemGainLimit: ''
+BoundarySectorData: ''
+BoundarySectorNTC: ''
+BoundarySectorInterconnections: ''
+SectorXDemand: ''
+SectorXFlexibleDemand: ''
+SectorXFlexibleSupply: ''
+SectorXReservoirLevels: ''
+SectorXFloodControl: ''
+BoundarySectorMaxSpillage: ''
+OptimalityGap: 0.0015
+modifiers:
+  Demand: 1
+  Solar: 1
+  Wind: 1
+  Storage: 1
+zones:
+- ES
+mts_zones:
+- ES
+all_zones:
+- ES
+- PT
+- FR
+ReserveParticipation:
+- COMC
+- GTUR
+- HDAM
+- HPHS
+- ICEN
+- CAES
+- BATS
+- BEVS
+- P2HT
+- ABHP
+- ASHP
+- GSHP
+- HYHP
+- WSHP
+- REHE
+- STUR
+ReserveParticipation_CHP: []
+default:
+  ShareOfFlexibleDemand: 0
+  DemandFlexibility: 0
+  LoadShedding: 0
+  ReservoirLevelInitial: 0.6246
+  ReservoirLevelFinal: 0.4589
+  WaterValue: 400
+  CostLoadShedding: 1500
+  CostCurtailment: 20
+  CostOfSpillage: 4
+  ValueOfLostLoad: 100000
+  PriceTransmission: 0
+  PriceOfGas: 44
+  PriceOfBlackCoal: 18
+  PriceOfLignite: 15
+  PriceOfCO2: 88.55
+  PriceOfBiomass: 33
+  PriceOfFuelOil: 61
+  PriceOfNuclear: 4
+  PriceOfPeat: 33
+  PriceOfAmmonia: 76
+  ShareOfQuickStartUnits: 0.5
+  PrimaryReserveLimit: 0
+  InertiaLimit: 0
+  FFRLimit: ''
+  FFRGainLimit: ''
+  SystemGainLimit: 0

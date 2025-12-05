@@ -6,16 +6,20 @@ create a simulation environment folder and run the simulation in GAMS
 @author: Sylvain Quoilin
 """
 
+# %%
+# %%
 # Add the root folder of Dispa-SET to the path so that the library can be loaded:
+
+
 import sys,os
 sys.path.append(os.path.abspath('..'))
-os.environ['GAMSPATH'] = '/opt/gams/gams45.7_linux_x64_64_sfx/'
+#os.environ['GAMSPATH'] = '/opt/gams/gams45.7_linux_x64_64_sfx/'
 
 # Import Dispa-SET
 import dispaset as ds
 
 # Load the configuration file
-config = ds.load_config('../ConfigFiles/Config_BE_Boundary_Sector.yml')
+config = ds.load_config(r'D:/Dispa-SET_UNLEASH/ConfigFiles/Config_BE_Boundary_SectorES20233.yml')
 
 # Build the simulation environment:
 SimData = ds.build_simulation(config)
