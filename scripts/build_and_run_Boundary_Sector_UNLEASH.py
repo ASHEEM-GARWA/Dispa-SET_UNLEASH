@@ -19,7 +19,7 @@ sys.path.append(os.path.abspath('..'))
 import dispaset as ds
 
 # Load the configuration file
-config = ds.load_config(r'D:/Dispa-SET_UNLEASH/ConfigFiles/Config_BE_Boundary_SectorES20233.yml')
+config = ds.load_config(r'D:/Dispa-SET_UNLEASH/ConfigFiles/Spain_2018.yml')
 
 # Build the simulation environment:
 SimData = ds.build_simulation(config)
